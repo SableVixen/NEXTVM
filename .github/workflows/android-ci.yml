@@ -10,6 +10,11 @@ concurrency:
   group: build-${{ github.ref }}
   cancel-in-progress: true
 
+env:
+  # Prevent GitHub runner from injecting broken JVM flags
+  JAVA_TOOL_OPTIONS: "-Xmx2g -Xms512m"
+  GRADLE_OPTS: "-Xmx2g -Dorg.gradle.jvmargs='-Xmx2g -Xms512m'"
+
 jobs:
   build:
     name: Build & Lint
@@ -34,15 +39,15 @@ jobs:
         with:
           cache-read-only: ${{ github.ref != 'refs/heads/main' }}
 
-      - name: Grant execute permission for gradlew
+      - name: Fix Gradle permissions
         run: chmod +x gradlew
 
       - name: Build Debug APK
-        run: ./gradlew :app:assembleDebug --no-daemon --stacktrace
+        run: ./gradlew :app:assembleDebug --stacktrace --no-daemon
 
       - name: Run Lint
         if: always()
-        run: ./gradlew lint --no-daemon --continue
+        run: ./gradlew lint --continue --no-daemon
 
       - name: Upload Debug APK
         if: success()
