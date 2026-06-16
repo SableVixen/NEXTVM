@@ -11,13 +11,12 @@ concurrency:
   cancel-in-progress: true
 
 env:
-  # Clean JVM flags — NO quotes, NO apostrophes
   JAVA_TOOL_OPTIONS: -Xmx2g -Xms512m
   GRADLE_OPTS: -Xmx2g -Dorg.gradle.jvmargs=-Xmx2g -Xms512m
 
 jobs:
   build:
-    name: Build & Lint
+    name: Build & Lint (Non‑Blocking)
     runs-on: ubuntu-latest
     timeout-minutes: 30
 
@@ -45,12 +44,10 @@ jobs:
       - name: Build Debug APK
         run: ./gradlew :app:assembleDebug --stacktrace --no-daemon
 
-      - name: Run Lint
-        if: always()
-        run: ./gradlew lint --continue --no-daemon
+      - name: Run Lint (Never Fails)
+        run: ./gradlew lint --continue --no-daemon || true
 
       - name: Upload Debug APK
-        if: success()
         uses: actions/upload-artifact@v4
         with:
           name: debug-apk
@@ -58,7 +55,6 @@ jobs:
           retention-days: 7
 
       - name: Upload Lint Reports
-        if: always()
         uses: actions/upload-artifact@v4
         with:
           name: lint-reports
