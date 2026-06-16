@@ -37,14 +37,14 @@ jobs:
       - name: Grant execute permission for gradlew
         run: chmod +x gradlew
 
-      - name: Build debug APK
+      - name: Build Debug APK
         run: ./gradlew :app:assembleDebug --no-daemon --stacktrace
 
-      - name: Run lint
+      - name: Run Lint
         if: always()
-        run: ./gradlew lint --no-daemon || true
+        run: ./gradlew lint --no-daemon --continue
 
-      - name: Upload build artifacts
+      - name: Upload Debug APK
         if: success()
         uses: actions/upload-artifact@v4
         with:
@@ -52,7 +52,7 @@ jobs:
           path: app/build/outputs/apk/debug/*.apk
           retention-days: 7
 
-      - name: Upload lint reports
+      - name: Upload Lint Reports
         if: always()
         uses: actions/upload-artifact@v4
         with:
