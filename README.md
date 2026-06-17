@@ -315,6 +315,11 @@ Users are responsible for complying with applicable laws and terms of service wh
 
 ---
 
+## How the APK is compiled
+The APK was compiled using Gradle
+
+---
+
 ## License
 
 ```
@@ -332,8 +337,6 @@ WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
 See the License for the specific language governing permissions and
 limitations under the License.
 ```
-## How the APK is compiled
-The APK was compiled using Gradle
 
 ---
 
