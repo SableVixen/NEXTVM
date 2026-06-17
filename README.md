@@ -336,9 +336,9 @@ limitations under the License.
 ---
 
 <p align="center">
-  <b>Built with determination from Bangladesh</b>
+  <b>NEXTVM is built with determination from Bangladesh</b>
   <br><br>
-  <a href="https://github.com/TanvirHossain2/NEXTVM/stargazers">Star this repo</a> if you believe in the vision.
+  <a href="https://github.com/SableVixen/NEXTVM-fork/stargazers">Star this repo</a> if you believe in the vision.
   <br>
   Let's build the most powerful Android virtual environment — together.
 </p>
