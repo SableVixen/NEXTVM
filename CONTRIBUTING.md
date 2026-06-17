@@ -10,8 +10,6 @@ Thank you for your interest in contributing to NEXTVM! This project aims to buil
 - [Making Changes](#making-changes)
 - [Code Style](#code-style)
 - [Submitting a Pull Request](#submitting-a-pull-request)
-- [Areas Where Help is Needed](#areas-where-help-is-needed)
-- [Reporting Issues](#reporting-issues)
 
 ---
 
@@ -97,8 +95,6 @@ If you're new to the codebase, read these files in order:
 
 ### Before You Start
 
-- Check the [Issues](https://github.com/TanvirHossain2/NEXTVM/issues) page for existing discussions
-- For large changes, open an issue first to discuss the approach
 - Make sure your change aligns with the project's goals (no-root virtualization)
 
 ### Code Guidelines
@@ -156,63 +152,6 @@ How this was tested (device, API level, specific apps tested).
 Before/After screenshots.
 ```
 
-## Areas Where Help is Needed
-
-### Good First Issues
-
-- Writing unit tests (currently at 0% coverage)
-- Adding KDoc comments to public APIs
-- Improving error messages and user-facing strings
-- UI animations and transitions in feature modules
-
-### Intermediate
-
-- System service proxy implementations (Camera, Storage/SAF, DownloadManager)
-- WebView process virtual context support
-- Clipboard, alarm, job scheduler persistence across VM restarts
-- Performance profiling and optimization
-
-### Advanced
-
-- Native hook engine improvements (migrating to [bhook](https://github.com/nicklhw/bhook))
-- Multi-process ClassLoader isolation for stable app hosting
-- App compatibility fixes for specific frameworks (Flutter, React Native, Unity)
-- Play Integrity / SafetyNet bypass improvements
-- Memory management optimization for multiple running instances
-
-### Research
-
-- Investigating ARM64 hooking libraries for broader native function interception
-- Android 15/16 compatibility analysis for new security restrictions
-- GMS integration improvements for Google Sign-In flow
-
-## Reporting Issues
-
-When reporting a bug, include:
-
-- **Device**: Model, Android version, RAM
-- **App being virtualized**: Package name and version
-- **Steps to reproduce**: Numbered steps
-- **Expected behavior**: What should happen
-- **Actual behavior**: What actually happens
-- **Logs**: Logcat output filtered to `com.nextvm` (if possible)
-
-### Issue Labels
-
-| Label | Description |
-|-------|-------------|
-| `bug` | Something isn't working |
-| `enhancement` | New feature or improvement |
-| `good-first-issue` | Good for newcomers |
-| `help-wanted` | Extra attention needed |
-| `compatibility` | App compatibility issue |
-| `native` | Related to C++/NDK code |
-| `proxy` | Related to Binder proxy layer |
-
 ---
-
-## Questions?
-
-If you have questions about the codebase or contribution process, open a [Discussion](https://github.com/TanvirHossain2/NEXTVM/discussions) on GitHub.
 
 Thank you for contributing to NEXTVM!
