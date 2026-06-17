@@ -332,13 +332,15 @@ WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
 See the License for the specific language governing permissions and
 limitations under the License.
 ```
+## How the APK is compiled
+The APK was compiled using Gradle
 
 ---
 
 <p align="center">
   <b>NEXTVM is built with determination from Bangladesh</b>
   <br><br>
-  <a href="https://github.com/SableVixen/NEXTVM-fork/stargazers">Star this repo</a> if you believe in the vision.
+  <a href="https://github.com/SableVixen/NEXTVM/stargazers">Star this repo</a> if you believe in the vision.
   <br>
   Let's build the most powerful Android virtual environment — together.
 </p>
