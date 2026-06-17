@@ -214,7 +214,7 @@ NEXTVM/
 
 ## How to install NEXTVM
 
-Click on 1 tags, click on the latest release, and click on app-debug.apk.
+Click on tags, click on the latest release, and click on app-debug.apk.
 
 > **Note:** The project is in active alpha development. Some modules may have compilation issues that are being actively resolved.
 
